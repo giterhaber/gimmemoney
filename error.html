@@ -13,7 +13,7 @@
             padding-left: 200px;
         }
 
-        img {
+        video {
             cursor: pointer;
             width: 60%;
             height: auto;
@@ -31,14 +31,20 @@
 
         body {
             /* background-image: url('img/loading.gif'); */
-            background-color: #211f23;
+            background-color: #222224;
         }
     </style>
 </head>
 <body>
     <div>
         <p class="title" style="color: aliceblue;">heres your medicine, sorry</p>
-        <img src="img/final.gif"  >
+        <!-- <img src="img/final.gif"  > -->
+
+        <video  autoplay loop muted>
+            <source src="img/final.mp4" type="video/mp4" />
+            
+            Your browser does not support the video tag.
+          </video>
     </div>
     <script>
         $('img').on('click', () => {
