@@ -26,7 +26,8 @@ password.get().then( (doc => {
 
     $('#passcode').on('input', (e) => {
         if(e.target.value == doc.data().password) {
-            localStorage.setItem('status', 'on')
+            // localStorage.setItem('status', 'on')
+            document.cookie = "status=on";
         } else {
             //
         }
