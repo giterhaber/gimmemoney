@@ -1,4 +1,5 @@
 $('.content').prepend(`
+<button id="out" class="button is-danger is-small">OUT</button><br><br>
 <br>
 <input type="password" id="passcode" class="input is-small" style="width: 150px;" placeholder="code here">
 <br><br>
@@ -104,16 +105,11 @@ $('p').each(function() {
 
 //logout
 
-$('.content').prepend(`<br>
-<button id="out" class="button is-danger is-small">OUT</button><br><br>
-`)
-
-$('.content').prepend(`<br>
-<button id="out" class="button is-danger is-small">OUT</button><br><br>
-`)
 
 $('#out').on('click', () => {
     // localStorage.removeItem('status')
     document.cookie = "status=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     location.href = 'index.html'
 })
+
+
