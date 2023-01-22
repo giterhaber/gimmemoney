@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <style>
+        div {
+            padding-top: 150px;
+            margin: auto;
+            padding-left: 200px;
+        }
+
+        img {
+            cursor: pointer;
+            width: 60%;
+            height: auto;
+            position: fixed;
+            top: 20px;
+            bottom: 20px;
+            left: 0px;
+        }
+
+        .title {
+            position: absolute;
+            right: 300px;
+            z-index: 1;
+        }
+
+        body {
+            /* background-image: url('img/loading.gif'); */
+            background-color: #211f23;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p class="title" style="color: aliceblue;">heres your medicine, sorry</p>
+        <img src="img/final.gif"  >
+    </div>
+    <script>
+        $('img').on('click', () => {
+            localStorage.setItem('page', `inks`)
+            location.href = 'inks.html'
+        })
+    </script>
+</body>
+</html>
