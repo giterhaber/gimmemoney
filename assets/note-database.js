@@ -28,6 +28,7 @@ password.get().then( (doc => {
         if(e.target.value == doc.data().password) {
             // localStorage.setItem('status', 'on')
             document.cookie = "status=on";
+            location.reload()
         } else {
             //
         }
