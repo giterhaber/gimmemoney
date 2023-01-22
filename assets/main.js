@@ -108,7 +108,12 @@ $('.content').prepend(`<br>
 <button id="out" class="button is-danger is-small">OUT</button><br><br>
 `)
 
+$('.content').prepend(`<br>
+<button id="out" class="button is-danger is-small">OUT</button><br><br>
+`)
+
 $('#out').on('click', () => {
-    localStorage.removeItem('status')
+    // localStorage.removeItem('status')
+    document.cookie = "status=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     location.href = 'index.html'
 })
