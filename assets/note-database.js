@@ -101,18 +101,39 @@ function notSaved() {
 
 
 //test
-$(document).ready(function() {
-    
-        if (getCookie('status') == 'on') {
+
+function passcode() {
+    if (getCookie('status') == 'on') {
         $('#passcode').hide()
     }//
 
+}
+
+$(document).ready(function() {
+    passcode();
     $('#gogong').on('input', (e) => {
         console.log()
         if (e.target.value == 'chineseinstrument') {
             $('#nft').show()
             NFTcontent()
         }
-    })
+    })//
 })
 
+//
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
