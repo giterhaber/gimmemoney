@@ -102,6 +102,10 @@ function notSaved() {
 
 //test
 $(document).ready(function() {
+    
+        if (getCookie('status') == 'on') {
+        $('#passcode').hide()
+    }//
 
     $('#gogong').on('input', (e) => {
         console.log()
