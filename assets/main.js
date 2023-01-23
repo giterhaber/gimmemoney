@@ -108,7 +108,7 @@ $('p').each(function() {
 
 $('#out').on('click', () => {
     // localStorage.removeItem('status')
-    document.cookie = "status=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = "status=; ";
     location.href = 'index.html'
 })
 
