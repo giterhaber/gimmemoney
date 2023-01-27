@@ -18,3 +18,14 @@ p {
 /*     right: 20px;
     position: absolute; */
 }
+.wallet {
+    margin-bottom: 2px;
+}
+
+.data {
+    margin-bottom: 50px;
+}
+
+.key {
+    cursor: pointer;
+}
