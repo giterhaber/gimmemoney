@@ -21,6 +21,7 @@ $('.content').prepend(`
 <button id="silver" class="button">silver</button>
 
 <button id="inks" class="button is-small" style="margin-left: 150px">inks</button>
+<button id="junks" class="button is-small" style="margin-left: 150px">junks</button>
 `)
 
 //active status
@@ -82,6 +83,11 @@ $('#silver').on('click', () => {
 $('#inks').on('click', () => {
     location.href = 'inks.html'
     setItem('inks')
+})
+
+$('#junks').on('click', () => {
+    location.href = 'junks.html'
+    setItem('junks')
 })
 
 
